@@ -7,24 +7,24 @@ import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline";
 const Sidebar = () => {
   return (
     <div>
-      <Link
-        href="/store"
-        className="bg-violet-600  flex items-end justify-start px-4 py-2 rounded-md m-3"
-      >
-        <div className="">
+      <aside className="flex h-screen w-60 bg-black flex-col overflow-y-hidden border-r px-5 py-8">
+        <Link href="/store" className="flex">
           <Logo />
+        </Link>
+        <div className="mt-6 flex flex-1 flex-col justify-between">
+          <nav className="-mx-3 space-y-6 ">
+            <div className="space-y-3 ">
+              <NavLinks />
+            </div>
+          </nav>
         </div>
-      </Link>
-      <div className="flex flex-wrap md:grow justify-center gap-2 flex-row md:justify-between space-x-2 md:flex-col ">
-        <NavLinks />
-
         <form>
-          <button className="flex h-[48px]  grow justify-start items-center gap-x-1 mx-2 hover:bg-sky-100 bg-gray-50 hover:text-violet-500 rounded-md px-4 py-2 font-medium">
+          <button className="flex  grow justify-start items-center gap-x-1 hover:bg-sky-100 bg-gray-50 rounded-md px-4 py-2 font-medium">
             <ArrowLeftOnRectangleIcon className="w-6" />
             Sign Out
           </button>
         </form>
-      </div>
+      </aside>
     </div>
   );
 };

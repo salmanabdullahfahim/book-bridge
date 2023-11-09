@@ -31,10 +31,11 @@ const NavLinks = () => {
           <Link
             key={link.name}
             href={link.href}
-            className="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-violet-600 md:flex-none md:justify-start md:px-3"
+            className="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-50 hover:text-gray-700"
           >
-            <IconComponent className="w-6" />
-            <p className="hidden md:block">{link.name}</p>
+            <IconComponent className="w-5 h-5" />
+
+            <span className="mx-2 text-sm font-medium">{link.name}</span>
           </Link>
         );
       })}
